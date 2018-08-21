@@ -1,6 +1,6 @@
 name := "between"
 organization := "nl.gn0s1s"
-version := "0.3.0"
+version := "0.3.0-KH"
 startYear := Some(2018)
 homepage := Some(url("https://github.com/philippus/between"))
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
@@ -12,7 +12,7 @@ bintrayOrganization := Some("gn0s1s")
 bintrayRepository := "releases"
 
 libraryDependencies ++= Seq(
-  "org.scalacheck" %% "scalacheck" % "1.14.0" % Test
+  "org.scalacheck" %% "scalacheck" % "1.14.1-SNAPSHOT-KH" % Test
 )
 
 pomExtra :=

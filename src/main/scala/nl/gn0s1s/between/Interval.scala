@@ -4,7 +4,7 @@ final case class Interval[T](`-`: T, `+`: T)(implicit ordering: Ordering[T]) {
   t =>
   import ordering.mkOrderingOps
 
-  require(t.`-`.<(t.`+`))
+  require(t.`-`.<(t.`+`) || t.`-` == t.`+`)
 
   def <(s: Interval[T]): Boolean = t.`+` < s.`-`
   def before(s: Interval[T]): Boolean = this < s
